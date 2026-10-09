@@ -1,0 +1,254 @@
+/* =========================
+   Global
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#FCE2DB;
+    color:#333;
+    min-height:100vh;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:#D76F6F;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:50px;
+    object-fit:contain;
+}
+
+.logo h2{
+    color:white;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:white;
+    transition:.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* =========================
+   Auth Section
+========================= */
+
+.auth-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:80vh;
+    padding:50px 20px;
+}
+
+.auth-container{
+    width:100%;
+    max-width:1100px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.auth-image{
+    background:#f8d7d0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+.auth-image img{
+    width:80%;
+    animation:float 4s ease-in-out infinite;
+}
+
+.auth-form{
+    padding:50px;
+}
+
+.auth-form h1{
+    color:#9A4B4B;
+    margin-bottom:10px;
+}
+
+.auth-form p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-group input{
+    width:100%;
+    padding:14px;
+
+    border:2px solid #eee;
+    border-radius:10px;
+
+    outline:none;
+    transition:.3s;
+}
+
+.input-group input:focus{
+    border-color:#D76F6F;
+}
+
+/* =========================
+   Button
+========================= */
+
+.btn{
+    width:100%;
+    border:none;
+    cursor:pointer;
+
+    background:#D76F6F;
+    color:white;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    font-size:1rem;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#9A4B4B;
+    transform:translateY(-2px);
+}
+
+.auth-link{
+    margin-top:20px;
+    text-align:center;
+}
+
+.auth-link a{
+    color:#D76F6F;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+    background:#9A4B4B;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.footer-content h3{
+    margin-bottom:10px;
+}
+
+/* =========================
+   Animation
+========================= */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:900px){
+
+    .auth-container{
+        grid-template-columns:1fr;
+    }
+
+    .auth-image{
+        display:none;
+    }
+
+    .nav-links{
+        gap:15px;
+    }
+}

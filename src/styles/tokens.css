@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Warm House — Design Tokens
+   Brand palette, typography, spacing and shadows preserved from the
+   original stylesheet (D76F6F / 9A4B4B / FCE2DB) and refined for clarity.
+   ========================================================================== */
+
+:root {
+  /* Brand colours */
+  --color-primary: #d76f6f;
+  --color-primary-light: #e28d8d;
+  --color-primary-dark: #9a4b4b;
+  --color-primary-deep: #7d3838;
+  --color-primary-soft: #f8d7d0;
+  --color-primary-tint: #fbe9e4;
+  --color-cream: #fff7f3;
+  --color-primary-contrast: #ffffff;
+  --color-primary-rgb: 215, 111, 111;
+  --color-primary-dark-rgb: 154, 75, 75;
+
+  /* Surfaces & text */
+  --color-background: #fce2db;
+  --color-surface: #ffffff;
+  --color-surface-muted: #fdf4f1;
+  --color-text: #333333;
+  --color-text-muted: #555555;
+  --color-text-subtle: #666666;
+  --color-border: #eeeeee;
+  --color-border-strong: #e2cfc9;
+
+  /* Feedback */
+  --color-success: #2f7d5b;
+  --color-success-soft: #e3f3ec;
+  --color-error: #b23b3b;
+  --color-error-soft: #fbe5e5;
+
+  /* Gradients */
+  --gradient-nav: linear-gradient(120deg, #b95f5f 0%, #d76f6f 55%, #c76a6a 100%);
+  --gradient-hero: radial-gradient(
+      120% 120% at 50% 0%,
+      rgba(255, 255, 255, 0.75) 0%,
+      rgba(252, 226, 219, 0) 55%
+    ),
+    linear-gradient(180deg, #fce2db 0%, #fbd9d0 100%);
+  --gradient-footer: linear-gradient(160deg, #8f4343 0%, #9a4b4b 60%, #a95454 100%);
+
+  /* Typography */
+  --font-family-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-xs: 0.8125rem;
+  --font-size-sm: 0.9375rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.375rem;
+  --font-size-xl: 1.75rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3rem;
+  --line-height-base: 1.7;
+  --line-height-tight: 1.25;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 5rem;
+
+  /* Radii */
+  --radius-xs: 8px;
+  --radius-sm: 10px;
+  --radius-md: 15px;
+  --radius-lg: 20px;
+  --radius-xl: 25px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(var(--color-primary-dark-rgb), 0.08);
+  --shadow-sm: 0 5px 20px rgba(var(--color-primary-dark-rgb), 0.1);
+  --shadow-md: 0 12px 30px rgba(var(--color-primary-dark-rgb), 0.1);
+  --shadow-lg: 0 20px 45px rgba(var(--color-primary-dark-rgb), 0.16);
+  --shadow-nav: 0 6px 24px rgba(var(--color-primary-dark-rgb), 0.22);
+  --shadow-primary: 0 10px 25px rgba(var(--color-primary-rgb), 0.35);
+
+  /* Layout */
+  --layout-max-width: 1200px;
+  --layout-gutter: 8%;
+  --header-height: 78px;
+
+  /* Motion */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-3xl: 2.1rem;
+    --font-size-4xl: 2.3rem;
+    --layout-gutter: 5%;
+    --header-height: 70px;
+  }
+}

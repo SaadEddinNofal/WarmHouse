@@ -1,0 +1,175 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#FCE2DB;
+    color:#333;
+    line-height:1.8;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    background:#D76F6F;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:50px;
+    object-fit:contain;
+}
+
+.logo h2{
+    color:white;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-section{
+    padding:50px 8%;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+
+    background:white;
+    padding:40px;
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* LEFT SIDE */
+.contact-info h1{
+    color:#9A4B4B;
+    margin-bottom:15px;
+}
+
+.contact-info p{
+    margin-bottom:20px;
+    color:#555;
+}
+
+.info-box{
+    background:#FCE2DB;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.info-box h3{
+    color:#9A4B4B;
+    margin-bottom:5px;
+}
+
+/* RIGHT FORM */
+
+.contact-form h2{
+    color:#9A4B4B;
+    margin-bottom:20px;
+}
+
+.input-group{
+    margin-bottom:15px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:600;
+}
+
+.input-group input,
+.input-group textarea{
+    width:100%;
+    padding:12px;
+
+    border:2px solid #eee;
+    border-radius:10px;
+
+    outline:none;
+    transition:.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+    border-color:#D76F6F;
+}
+
+/* BUTTON */
+
+button{
+    width:100%;
+    padding:14px;
+
+    background:#D76F6F;
+    color:white;
+
+    border:none;
+    border-radius:10px;
+
+    font-weight:600;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+    background:#9A4B4B;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#9A4B4B;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    margin-top:50px;
+}
+
+.footer-content h3{
+    margin-bottom:10px;
+}
+
+.footer-content p{
+    margin-bottom:10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+}

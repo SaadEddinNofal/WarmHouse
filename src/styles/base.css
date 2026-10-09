@@ -1,0 +1,176 @@
+/* ==========================================================================
+   Warm House — Base / global styles
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background: var(--color-background);
+  color: var(--color-text);
+  line-height: var(--line-height-base);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(var(--color-primary-rgb), 0.28);
+  color: var(--color-primary-deep);
+}
+
+button {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: var(--line-height-tight);
+}
+
+/* Visible, consistent focus ring for keyboard users */
+:focus-visible {
+  outline: 3px solid var(--color-primary-dark);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Shared page shell -------------------------------------------------------- */
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout__main {
+  flex: 1;
+}
+
+.page-section {
+  padding: var(--space-8) var(--layout-gutter);
+}
+
+.page-section--tight {
+  padding: var(--space-6) var(--layout-gutter);
+}
+
+.surface-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.section-title {
+  color: var(--color-primary-dark);
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-6);
+}
+
+.section-title--underline::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: var(--color-primary);
+  margin-top: 8px;
+  border-radius: var(--radius-sm);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.auth-link {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Route transition --------------------------------------------------------- */
+
+.route-fade-enter-active {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.route-fade-enter-from {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* Animations (preserved from the original site) ---------------------------- */
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
